@@ -1,0 +1,25 @@
+spring:
+  messages:
+    encoding: UTF-8
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: a2-ms
+  cloud:
+    consul:
+      discovery:
+        preferIpAddress: true
+        instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+        tags: ver=1.0
+
+server:
+  port: 9070
+  error:
+    include-stacktrace: ALWAYS
+    include-exception: true
+  servlet:
+    context-path:
+
+# 服务列表刷新时间
+ribbon:
+  ServerListRefreshInterval: 3000

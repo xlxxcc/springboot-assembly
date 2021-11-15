@@ -1,0 +1,31 @@
+spring:
+  messages:
+    encoding: UTF-8
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: a1-ms
+  cloud:
+    consul:
+      discovery:
+        preferIpAddress: true
+        instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+        tags: ver=1.0
+      service-registry:
+        auto-registration:
+          enabled:
+    service-registry:
+      auto-registration:
+        enabled: false
+
+server:
+  port: 9060
+  error:
+    include-stacktrace: ALWAYS
+    include-exception: true
+  servlet:
+    context-path:
+
+# 服务列表刷新时间
+ribbon:
+  ServerListRefreshInterval: 3000

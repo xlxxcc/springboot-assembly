@@ -1,0 +1,10 @@
+spring:
+  messages:
+    encoding: UTF-8
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    consul:
+      discovery:
+        preferIpAddress: true
+        tags: ver=1.0
