@@ -94,19 +94,19 @@ public class ApolloApplication {
 [A1Application.java](a1-ms/src/main/java/com/test/a1/A1Application.java)
 
 [TestController.java](a1-ms/src/main/java/com/test/a1/TestController.java)
-
+
 ### A2源码:
 [A2Application.java](a2-ms/src/main/java/com/test/a2/A2Application.java)
 
 [TestController.java](a2-ms/src/main/java/com/test/a2/TestController.java)
-
+
 ### Assembly源码:
 [AssemblyApplication.java](assembly-ms/src/main/java/com/test/assembly/AssemblyApplication.java)
 
 ### 运行
 
 ![](doc/springboot-assembly-run.png)
-
+
 ### 配置和依赖图:
 
 ![](doc/springboot-assembly-dep.png)
