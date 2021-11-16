@@ -125,6 +125,6 @@ public class ApolloApplication {
  
 **以上总结并非100%正确. 有兴趣的同学可以先阅读spring boot 启动源码, 并且自行测试.**
 
-附： 配置顺序
+附： 配置优秀级顺序
 
 ![](doc/springboot-assembly-config-order.png)
