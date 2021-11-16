@@ -33,6 +33,7 @@ public class AssemblyApplication {
                             .properties("spring.cloud.consul.discovery.instance-id=a1")
 //                            .properties("spring.cloud.consul.service-registry.auto-registration.enabled=true")
                             .sources(RefreshScope.class)
+                            .profiles("additional")
                             .run(args);
             log.info(context.getId() + " isActive: " + context.isActive());
             log.info(commonContext.getId() + " env: " + context.getEnvironment().toString());
