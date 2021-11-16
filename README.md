@@ -128,3 +128,8 @@ public class ApolloApplication {
 附： 配置优秀级顺序
 
 ![](doc/springboot-assembly-config-order.png)
+
+附： 启动日志
+
+![](doc/springboot-assembly-startup-log.png)
+
