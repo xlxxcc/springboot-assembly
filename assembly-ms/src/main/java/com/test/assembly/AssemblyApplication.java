@@ -14,13 +14,14 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class AssemblyApplication {
 
     public static void main(String[] args) {
-        System.setProperty("spring.cloud.service-registry.auto-registration.enabled", "false");
+        System.setProperty("management.endpoints.web.exposure.include", "*");
+        //System.setProperty("spring.cloud.service-registry.auto-registration.enabled", "false");
         final ConfigurableApplicationContext commonContext =
                 new SpringApplicationBuilder(AssemblyApplication.class).web(WebApplicationType.NONE).run(args);
         log.info(commonContext.getId() + " isActive: " + commonContext.isActive());
         log.info(commonContext.getId() + " env: " + commonContext.getEnvironment().toString());
 
-        System.setProperty("spring.cloud.service-registry.auto-registration.enabled", "true");
+        //System.setProperty("spring.cloud.service-registry.auto-registration.enabled", "true");
 //        System.setProperty("spring.cloud.consul.discovery.instance-id", "${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}");
 
         // a1

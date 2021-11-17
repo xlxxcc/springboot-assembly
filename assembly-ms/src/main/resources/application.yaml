@@ -8,3 +8,6 @@ spring:
       discovery:
         preferIpAddress: true
         tags: ver=1.0
+    service-registry:
+      auto-registration:
+        enabled: false
