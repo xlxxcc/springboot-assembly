@@ -120,7 +120,7 @@ public class ApolloApplication {
 - **<font color='red'>3、通过 SpringApplicationBuilder.properties() 设置的配置, 属于默认配置. 优先级低.</font>**
 - **<font color='red'>4、通过 SpringApplicationBuilder.profiles("portal")加载到配置, 优先级最高. 见apollo assembly源码改造.</font>**
 - **<font color='red'>5、此外 子context前, 还可以通过 System.setProperty() 设置配置.</font>**
-- **<font color='red'>6、一些配置使用@EnableConfigurationProperties注解的bean在父 Context 就加载到env中了,  如 DataSourceProperties 配置,  若希望通过设置配置改变值必须 publishEvent 刷新bean, 否则只能通过getBean()去改bean的属性值.</font>** **换句话说, 子context 装配bean时, 先到父 context 上找, 没有再注册bean. 因此 A1 和 A2模块注意定义不同的包路径,  在装配bean时, 通过扫描不同包路径隔离.** 
+- **<font color='red'>6、一些配置bean在父 Context 就加载到env中了,  如 DataSourceProperties 配置,  若希望通过设置配置改变值必须 publishEvent 刷新bean, 否则只能通过getBean()去改bean的属性值.</font>** **换句话说, 子context 装配bean时, 先到父 context 上找, 没有再注册bean. 因此 A1 和 A2模块注意定义不同的包路径,  在装配bean时, 通过扫描不同包路径隔离.** 
 - **<font color='red'>7、@PropertySource的优先级最低 .</font>**
  
 **以上总结并非100%正确. 有兴趣的同学可以先阅读spring boot 启动源码, 并且自行测试.**
